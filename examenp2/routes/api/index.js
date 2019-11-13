@@ -9,24 +9,28 @@ var JWTStrategy = passportJWT.Strategy;
 function initApiRouter(db){
 
 passport.use(
-  new JWTStrategy(
-    {
-      jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-      secretOrKey: 'unexamendelsegundoparcial201903'
-    },
-    (payload, next)=>{
-      var user = payload;
-      return next(null, user);
-    }
-  )
-);
+    new JWTStrategy(
+      {
+        jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+        secretOrKey: 'unexamendelsegundoparcial201903'
+      },
+      (payload, next)=>{
+        var user = payload;
+        return next(null, user);
+      }
+    )
+  );
 
 
 //Rutas de Cada Entidad
 var securityApiRoutes = require('./security/index')(db);
+var exaApiRoutes =  require('./exa/index')(db);
 
 //localhost:3000/api/sec/
 router.use('/sec', securityApiRoutes);
+router.use('/exa', exaApiRoutes);
+
+//
 
 
 //localhost:3000/api/exa
