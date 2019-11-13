@@ -15,6 +15,8 @@ function initExaApi(db)
         });// end getAllProducts
       }); // get /all
 
+
+      
       router.post('/new', function(req, res)
       {
         /*if (req.user.roles.findIndex((o)=>{return o=="administrador"}) == -1) 
@@ -31,8 +33,8 @@ function initExaApi(db)
              "PaisOrigen": req.body.PaisOrigen,
              "NumeroTomos": parseInt(req.body.NumeroTomos),
              "Estado":req.body.apartament,
-             "KeyWords": req.body.KeyWords,
-             "Categorias": req.body.Categorias,
+             "KeyWords": [req.body.KeyWords1, req.body.KeyWords2],
+             "Categorias": [req.body.Categorias1, req.body.Categorias2],
              "CreatedBy": req.user
            }
          );
@@ -44,7 +46,6 @@ function initExaApi(db)
           }
         });// saveNewManga
      }); // post /new
-
 
      router.put('/update/:mangaid',
      function(req, res)
