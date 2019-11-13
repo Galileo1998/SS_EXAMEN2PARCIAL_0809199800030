@@ -68,6 +68,21 @@ function exaModel(db)
           return handler(null, rslt);
       })//deleteone
     }
+
+    exaModel.getOneManga = (id, handler)=>
+    {
+        var query = {"_id": new ObjectId(id)};
+        exasCollection.find(query).toArray(
+          (err, docs)=>{
+            if(err)
+            {
+              console.log(err);
+              return handler(err, null);
+            }
+            return handler(null, docs);
+          }
+        );
+    }
     
     return exaModel;
 }
