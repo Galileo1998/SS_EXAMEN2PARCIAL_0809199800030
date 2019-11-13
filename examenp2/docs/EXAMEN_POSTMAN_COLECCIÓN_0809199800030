@@ -1,0 +1,300 @@
+{
+	"id": "a4a5506d-2f0f-42c8-952b-014addf0a0be",
+	"name": "Examen",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"9e331260-c51b-4792-9929-2f13fcf42663",
+		"c20dd5af-5820-4e6f-882d-8410a4a41fad",
+		"48659ee1-e913-4117-b9e4-e8a85105b548",
+		"8912379a-c6e6-48c8-9ebd-a7c226a5008a",
+		"3ba117d7-3c14-4bcb-b5c4-887b96d92cb0",
+		"92e70a57-dafb-4b8f-88b3-9cd3ebbbdfd7",
+		"e60970b3-d68b-4b84-93b9-99bb9ae94d50"
+	],
+	"folders_order": [],
+	"protocolProfileBehavior": {},
+	"folders": [],
+	"requests": [
+		{
+			"id": "3ba117d7-3c14-4bcb-b5c4-887b96d92cb0",
+			"name": "GET ONE EXAMEN",
+			"url": "http://localhost:3000/api/exa/one/:mangaid",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [
+				{
+					"key": "mangaid",
+					"value": "dede"
+				}
+			],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {
+				"mangaid": "dede"
+			}
+		},
+		{
+			"id": "48659ee1-e913-4117-b9e4-e8a85105b548",
+			"name": "PUT EXAMEN",
+			"url": "http://localhost:3000/api/exa/update/:mangaid",
+			"description": "",
+			"data": [
+				{
+					"key": "Estado",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [
+				{
+					"key": "mangaid",
+					"value": ""
+				}
+			],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {
+				"mangaid": ""
+			}
+		},
+		{
+			"id": "8912379a-c6e6-48c8-9ebd-a7c226a5008a",
+			"name": "DELETE EXAMEN",
+			"url": "http://localhost:3000/api/exa/delete/:mangaid",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [
+				{
+					"key": "mangaid",
+					"value": ""
+				}
+			],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {
+				"mangaid": ""
+			}
+		},
+		{
+			"id": "92e70a57-dafb-4b8f-88b3-9cd3ebbbdfd7",
+			"name": "SIGNIN",
+			"url": "http://localhost:3000/api/sec/signin",
+			"description": "",
+			"data": [
+				{
+					"key": "email",
+					"value": "galileoga63@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "@Galileo1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9e331260-c51b-4792-9929-2f13fcf42663",
+			"name": "GET EXAMEN",
+			"url": "http://localhost:3000/api/exa/all",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c20dd5af-5820-4e6f-882d-8410a4a41fad",
+			"name": "POST  EXAMEN",
+			"url": "http://localhost:3000/api/exa/new",
+			"description": "",
+			"data": [
+				{
+					"key": "Nombre",
+					"value": "Dragon Ball",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Autor",
+					"value": "Akira",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "PaisOrigen",
+					"value": "Japón",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "NumeroTomos",
+					"value": "5000",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Estado",
+					"value": "Ongoing",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "KeyWords",
+					"value": "vywevdghvwejgfvducwe",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Categorias",
+					"value": "Shonen, Seinen",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e60970b3-d68b-4b84-93b9-99bb9ae94d50",
+			"name": "LOGIN",
+			"url": "http://localhost:3000/api/sec/login",
+			"description": "",
+			"data": [
+				{
+					"key": "email",
+					"value": "galileoga63@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pswd",
+					"value": "@Galileo1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		}
+	]
+}
