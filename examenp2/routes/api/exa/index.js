@@ -46,6 +46,24 @@ function initExaApi(db)
      }); // post /new
 
 
+     router.put('/update/:mangaid',
+     function(req, res)
+     {
+       var mangaIdToModify = req.params.conid;
+       var estadoAct= req.body.Estado;
+       exaModel.updateManga(
+         {Estado: estadoAct}, mangaIdToModify,
+         (err, rsult)=>{
+           if(err){
+             res.status(500).json(err);
+           }else{
+             res.status(200).json(rsult);
+           }
+         }
+         ); //updateManga
+     }
+    );// put :mangaid  
+
     return router;
 }
 
