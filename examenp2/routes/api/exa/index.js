@@ -64,6 +64,27 @@ function initExaApi(db)
      }
     );// put :mangaid  
 
+    
+  router.delete(
+    '/delete/:mangaid',
+    function( req, res) {
+
+      var id = req.params.mangaid || '';
+      if(id===' ')
+      {
+        return  res.status(404).json({"error": "Identificador no válido"});
+      }
+      exaModel.deleteManga(id, (err, rslt)=>{
+        if(err)
+        {
+          return res.status(500).json({"error":"Ocurrió un error, intente de nuevo."});
+        }
+        return res.status(200).json({"msg":"Deleted ok"});
+        
+      }); //delete product
+    }
+  );// delete
+
     return router;
 }
 
