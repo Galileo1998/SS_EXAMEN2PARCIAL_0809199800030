@@ -19,10 +19,10 @@ function initExaApi(db)
       
       router.post('/new', function(req, res)
       {
-        /*if (req.user.roles.findIndex((o)=>{return o=="administrador"}) == -1) 
+        if (req.user.roles.findIndex((o)=>{return o=="administrador"}) == -1) 
         {
           return res.status(401).json({"error":"Sin privilegio"});
-        }*/
+        }
     
         var newManga = Object.assign(
            {},

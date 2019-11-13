@@ -28,7 +28,7 @@ var exaApiRoutes =  require('./exa/index')(db);
 
 //localhost:3000/api/sec/
 router.use('/sec', securityApiRoutes);
-router.use('/exa', exaApiRoutes);
+router.use('/exa', passport.authenticate('jwt', {session:false}),  exaApiRoutes);
 
 //
 
