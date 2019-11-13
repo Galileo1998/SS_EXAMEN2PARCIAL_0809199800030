@@ -14,6 +14,38 @@ function initExaApi(db)
           }
         });// end getAllProducts
       }); // get /all
+
+      router.post('/new', function(req, res)
+      {
+        /*if (req.user.roles.findIndex((o)=>{return o=="administrador"}) == -1) 
+        {
+          return res.status(401).json({"error":"Sin privilegio"});
+        }*/
+    
+        var newManga = Object.assign(
+           {},
+           req.body,
+           { 
+             "Nombre":req.body.Nombre,
+             "Autor":req.body.Autor,
+             "PaisOrigen": req.body.PaisOrigen,
+             "NumeroTomos": parseInt(req.body.NumeroTomos),
+             "Estado":req.body.apartament,
+             "KeyWords": req.body.KeyWords,
+             "Categorias": req.body.Categorias,
+             "CreatedBy": req.user
+           }
+         );
+        exaModel.saveNewManga(newManga, (err, rslt)=>{
+          if(err){
+            res.status(500).json(err);
+          }else{
+            res.status(200).json(rslt);
+          }
+        });// saveNewManga
+     }); // post /new
+
+
     return router;
 }
 

@@ -19,6 +19,22 @@ function exaModel(db)
           }
         );
     } // end getAllMangas
+
+    
+    exaModel.saveNewManga = (newManga, handler)=>
+    {
+        exasCollection.insertOne(newManga, (err, result)=>
+        {
+          if(err)
+          {
+            console.log(err);
+            return handler(err, null);
+          }
+          return handler(null, result);
+        }); //insertOne
+    }
+
+   
     
     return exaModel;
 }
